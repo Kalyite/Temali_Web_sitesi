@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url("../image/login_back.jpg");
+    background-size: cover;
+    font-family: sans-serif;
+}
+.loginbox{
+    margin-top: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 420px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.8);
+}
+.user{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: calc(-100px/2);
+    left: calc(50% - 50px);
+    animation: animate2 2s ease-in-out;
+}
+@keyframes animate2 {
+    0%{opacity: 0; transform:translateY(-10px);}
+    100%{opacity: 1;transform: translateY(1px)}
+}
+.loginbox h2{
+    margin: 0;
+    padding: 0 0 20px;
+    color: #91b6f5;
+    text-align: center;
+    animation: animate6 2s ease-in-out;
+}
+@keyframes animate6 {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+    animation: animate5 2s ease-in-out;
+}
+@keyframes animate5 {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginbox input[type="email"],
+.loginbox input[type="password"]{
+    border: none;
+    opacity: 0.7;
+    border: #fff;
+    margin-top: 10px;
+    border-radius: 50px;
+    outline: none;
+    height: 25px;
+    color: #000000;
+    background-color: #1f1f1f;
+    font-size: 14px;
+    animation: animate 2s ease-in-out;
+}
+@keyframes animate {
+    0%{opacity: 0; transform:translateX(-10px);}
+    100%{opacity: 0.7;transform: translateX(1px)}
+}
+::placeholder{
+    color: rgba(255, 255, 255, 0.635);
+}
+.loginbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #ffffff;
+    font-size: 14px;
+    background: rgba(255,0,0,.5);
+    cursor: pointer;
+    border-radius: 20px;
+    animation: animate3 2s ease-in-out;
+}
+@keyframes animate3 {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.loginbox input[type="submit"]:hover{
+    background: rgba(55, 0, 123, 0.5);
+    color: #ffffff;
+}
+.loginbox a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    animation: animate4 2s ease-in-out;
+}
+@keyframes animate4 {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+section{
+    width:100%;
+    height:100vh;
+    background: url("../image/Background.jpg");
+    background-size: cover;
+}
+.logo{
+    position: absolute;
+    left: 20%;
+}
+.menu{
+    position:absolute;
+    width:100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding:0 100;
+    box-sizing: border-box;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.809);
+}
+.menu img{
+    float:left;
+    width:84px;
+}
+nav{
+    position:relative;
+    right: 30%;
+    float:right;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    color: aliceblue;
+    display:block;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding:30px 10px;
+    text-decoration: none;
+
+}
+nav ul li a:hover{
+    background: #000000ab;
+    color:#5c0000;
+}
+nav ul li ul{
+    display:block;
+    background:rgba(1, 1, 41, 0.5);
+    max-width:250px;
+    position:absolute;
+    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+    visibility: hidden;
+    opacity:0;
+    transition:0.5s;
+    transform:translateY(-40px);
+}
+nav ul li:hover ul{
+    visibility: visible;
+    opacity:1;
+    transform:translateY(6px);
+}
+nav li ul li a{
+    padding:10px;
+}
